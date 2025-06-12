@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<critical_analysis>
+  <work_info>
+    <title>The Road Not Taken</title>
+    <author>Robert Frost</author>
+    <type>Poem</type>
+  </work_info>
+
+  <analysis_summary>
+    This poem explores the themes of choice, individualism, and the way we narrate our own life stories. The speaker reflects on a decision made in the past, attributing later success to having chosen the "less traveled" path.
+  </analysis_summary>
+
+  <structural_elements>
+    <stanza number="1">
+      <theme>Dilemma and Choice</theme>
+      <interpretation>The speaker confronts a fork in the road, a metaphor for a significant life decision. The inability to travel both paths highlights the nature of choice.</interpretation>
+    </stanza>
+    <stanza number="2">
+      <theme>Justification of Choice</theme>
+      <interpretation>The speaker attempts to rationally justify the choice, even though both paths appear similar ("just as fair"). This points to the subjective nature of decision-making.</interpretation>
+    </stanza>
+    <stanza number="4">
+      <theme>Retrospective Narration</theme>
+      <interpretation>The final stanza leaps into the future, showing how the speaker will frame this choice with a "sigh" - which could be of relief or regret. The claim that the choice "made all the difference" is a powerful statement about how we create meaning from our past.</interpretation>
+    </stanza>
+  </structural_elements>
+
+  <literary_devices>
+    <device type="Metaphor">
+      <example>The diverging roads in a yellow wood.</example>
+      <meaning>Represents a critical decision point in life's journey.</meaning>
+    </device>
+    <device type="Imagery">
+      <example>yellow wood, undergrowth, grassy and wanted wear.</example>
+      <meaning>Creates a vivid, autumnal, and contemplative setting for the decision.</meaning>
+    </device>
+  </literary_devices>
+
+</critical_analysis>
