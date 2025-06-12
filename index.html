@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>您的名字</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+</head><body>
 
     <header class="header">
         <h1>您的名字</h1>
@@ -19,19 +18,91 @@
             <p>在这里详细介绍一下您自己。您可以谈论您的专业背景、学术经历、兴趣爱好，或者任何您想让访问者了解的事情。试着写两到三个段落，让内容更充实。</p>
         </section>
 
+        <section id="course-work">
+            <h2>课程作业：诗歌与XML分析</h2>
+            <p>根据课程要求，我选择了我最喜欢的诗歌之一《未选择的路》，并对其进行了XML格式的批判性分析。</p>
+            
+            <div class="poem-container">
+                <h3>The Road Not Taken (未选择的路)</h3>
+                <p><em>by Robert Frost</em></p>
+                <pre>
+Two roads diverged in a yellow wood,
+And sorry I could not travel both
+And be one traveler, long I stood
+And looked down one as far as I could
+To where it bent in the undergrowth;
+
+Then took the other, as just as fair,
+And having perhaps the better claim,
+Because it was grassy and wanted wear;
+Though as for that the passing there
+Had worn them really about the same,
+
+And both that morning equally lay
+In leaves no step had trodden black.
+Oh, I kept the first for another day!
+Yet knowing how way leads on to way,
+I doubted if I should ever come back.
+
+I shall be telling this with a sigh
+Somewhere ages and ages hence:
+Two roads diverged in a wood, and I—
+I took the one less traveled by,
+And that has made all the difference.
+                </pre>
+            </div>
+
+            <div class="xml-analysis">
+                <h3>XML 批判性分析</h3>
+                <p>以下是我创建的 <code>analysis.xml</code> 文件内容，它使用自定义标签来结构化地表达对诗歌主题和文学手法的理解。</p>
+                <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;critical_analysis&gt;
+  &lt;work_info&gt;
+    &lt;title&gt;The Road Not Taken&lt;/title&gt;
+    &lt;author&gt;Robert Frost&lt;/author&gt;
+    &lt;type&gt;Poem&lt;/type&gt;
+  &lt;/work_info&gt;
+
+  &lt;analysis_summary&gt;
+    This poem explores the themes of choice, individualism, and the way we narrate our own life stories. The speaker reflects on a decision made in the past, attributing later success to having chosen the "less traveled" path.
+  &lt;/analysis_summary&gt;
+
+  &lt;structural_elements&gt;
+    &lt;stanza number="1"&gt;
+      &lt;theme&gt;Dilemma and Choice&lt;/theme&gt;
+      &lt;interpretation&gt;The speaker confronts a fork in the road, a metaphor for a significant life decision. The inability to travel both paths highlights the nature of choice.&lt;/interpretation&gt;
+    &lt;/stanza&gt;
+    &lt;stanza number="2"&gt;
+      &lt;theme&gt;Justification of Choice&lt;/theme&gt;
+      &lt;interpretation&gt;The speaker attempts to rationally justify the choice, even though both paths appear similar ("just as fair"). This points to the subjective nature of decision-making.&lt;/interpretation&gt;
+    &lt;/stanza&gt;
+    &lt;stanza number="4"&gt;
+      &lt;theme&gt;Retrospective Narration&lt;/theme&gt;
+      &lt;interpretation&gt;The final stanza leaps into the future, showing how the speaker will frame this choice with a "sigh" - which could be of relief or regret. The claim that the choice "made all the difference" is a powerful statement about how we create meaning from our past.&lt;/interpretation&gt;
+    &lt;/stanza&gt;
+  &lt;/structural_elements&gt;
+
+  &lt;literary_devices&gt;
+    &lt;device type="Metaphor"&gt;
+      &lt;example&gt;The diverging roads in a yellow wood.&lt;/example&gt;
+      &lt;meaning&gt;Represents a critical decision point in life's journey.&lt;/meaning&gt;
+    &lt;/device&gt;
+    &lt;device type="Imagery"&gt;
+      &lt;example&gt;yellow wood, undergrowth, grassy and wanted wear.&lt;/example&gt;
+      &lt;meaning&gt;Creates a vivid, autumnal, and contemplative setting for the decision.&lt;/meaning&gt;
+    &lt;/device&gt;
+  &lt;/literary_devices&gt;
+
+&lt;/critical_analysis&gt;
+                </code></pre>
+            </div>
+        </section>
+
         <section id="projects">
             <h2>我的项目</h2>
             <div class="project-card">
                 <h3>项目一</h3>
                 <p>这里是您项目一的简介。说明这个项目是做什么的，您在其中扮演了什么角色，以及使用了哪些技术。</p>
-            </div>
-            <div class="project-card">
-                <h3>项目二</h3>
-                <p>这里是您项目二的简介。同上，介绍项目背景和您的贡献。</p>
-            </div>
-            <div class="project-card">
-                <h3>项目三</h3>
-                <p>这里是您项目三的简介。如果项目有链接，可以添加一个 a 标签，例如：<a href="#">项目链接</a>。</p>
             </div>
         </section>
     </main>
