@@ -1,117 +1,117 @@
-/* --- Global Styles --- */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.8;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa; /* Lighter, softer background */
-    color: #495057; /* Softer text color */
+/* --- 全局与动态背景 --- */
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* --- Container --- */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 2rem 1rem;
+    color: #e0e0e0;
+    background: linear-gradient(-45deg, #120e24, #0f172a, #231a3a, #0d122b);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+    min-height: 100vh;
+}
+
+/* --- 容器 --- */
 .container {
     width: 90%;
     max-width: 960px;
-    margin: 2.5rem auto;
-    padding: 0;
-    background: transparent;
-    box-shadow: none; /* Shadow will be on individual sections */
+    margin: 0 auto;
 }
 
-/* --- Header --- */
+/* --- 头部样式 --- */
 .header {
-    background: #212529; /* Darker, more modern navy/charcoal */
-    color: #fff;
-    padding: 4rem 2rem;
+    background: rgba(0, 0, 0, 0.2);
     text-align: center;
-    border-radius: 12px;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 4rem 2rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .header h1 {
     margin: 0;
-    font-family: 'Merriweather', serif; /* Elegant serif font for headings */
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -1px;
 }
 
 .header p {
     font-size: 1.3rem;
-    opacity: 0.85;
-    margin-top: 0.5rem;
+    opacity: 0.8;
+    margin-top: 0.75rem;
 }
 
-/* --- Section Styling (Card-based Design) --- */
+/* --- 内容区域玻璃拟态样式 --- */
 section {
-    background: #ffffff;
+    background: rgba(17, 25, 40, 0.5); /* 半透明背景 */
+    margin-top: 3rem;
     padding: 2.5rem;
-    margin-bottom: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 section h2 {
-    font-family: 'Merriweather', serif;
-    color: #343a40;
-    border-bottom: 3px solid #dee2e6;
-    padding-bottom: 15px;
-    margin-bottom: 25px;
-    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 2rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
-/* --- Poem & XML Analysis Sections --- */
-.poem-container, .xml-analysis {
+/* --- 诗歌与XML分析的3D交互卡片 --- */
+.poem-container,
+.xml-analysis {
     margin-top: 2rem;
     padding: 2rem;
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
-    border-radius: 8px;
-    transition: box-shadow 0.3s ease-in-out;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform-style: preserve-3d; /* 开启3D空间 */
 }
 
-.poem-container:hover {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-h3 {
-    font-family: 'Merriweather', serif;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: #212529;
-    font-size: 1.5rem;
-}
-
-.poem-container p em {
-    color: #6c757d;
-    font-style: italic;
+.poem-container h3, .xml-analysis h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 pre {
-    white-space: pre-wrap; /* Allows text to wrap */
-    word-wrap: break-word; /* Breaks long words */
+    white-space: pre-wrap;
+    word-wrap: break-word;
     font-size: 1rem;
     line-height: 1.7;
 }
 
-/* Enhanced XML Code Block Style */
 .xml-analysis pre {
-    background-color: #282c34; /* Dark background for code */
-    color: #abb2bf;           /* Light text on dark background */
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #a6e22e; /* 亮绿色代码，形成对比 */
     padding: 1.5rem;
     border-radius: 8px;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
     font-size: 0.95em;
-    overflow-x: auto; /* Add horizontal scroll for long lines */
+    border: 1px solid rgba(166, 226, 46, 0.2);
 }
 
-/* --- Footer --- */
+/* --- 页脚与霓虹光效 --- */
 .footer {
     text-align: center;
-    padding: 2.5rem 1rem;
+    padding: 3rem 1rem;
     margin-top: 3rem;
-    background: #343a40; /* Slightly lighter than header for contrast */
-    color: #f8f9fa;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .footer p {
@@ -119,14 +119,37 @@ pre {
 }
 
 .footer a {
-    color: #ffffff;
+    color: #c7d2fe;
     text-decoration: none;
-    margin: 0 12px;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .footer a:hover {
-    color: #17a2b8; /* A nice highlight color on hover */
-    text-decoration: none;
+    color: #ffffff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #8a2be2, /* 紫色光晕 */
+        0 0 82px #8a2be2,
+        0 0 92px #8a2be2;
+}
+
+/* --- 响应式设计 --- */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+    .header {
+        padding: 3rem 1.5rem;
+    }
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    section {
+        padding: 2rem 1.5rem;
+    }
 }
